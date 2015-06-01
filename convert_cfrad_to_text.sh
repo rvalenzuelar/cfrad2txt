@@ -9,7 +9,8 @@
 
 # input cfradial folder
 #-------------------------------
-CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
+CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
 
 # output text folders
 #-------------------------------
