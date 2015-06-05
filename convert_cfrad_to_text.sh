@@ -9,28 +9,30 @@
 
 # input cfradial folder
 #-------------------------------
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
-CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg05_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg14_cor"
+
+CFDIR="$HOME/P3_v2/cfrad/c04/leg10_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c04/leg11_cor"
 
 # output text folders
 #-------------------------------
 CXDIR="${CFDIR/cfrad/cfradTxt}"
 CXDIR_VE="$CXDIR/VE"
 CXDIR_VG="$CXDIR/VG"
-CXDIR_VU="$CXDIR/VU"
 
 # check existence of directories
 #------------------------------------------------
+cf_flag=true
 if [ ! -d $CFDIR ]; then
 	cf_flag=false
-else
-	cf_flag=true
 fi
 
+cx_flag=true
 if [ ! -d $CXDIR ]; then
 	cx_flag=false
-else
-	cx_flag=true
 fi
 
 
@@ -45,20 +47,22 @@ fi
 if [ "$cx_flag" = false ]; then
 	mkdir -p $CXDIR_VE
 	mkdir -p $CXDIR_VG
-	mkdir -p $CXDIR_VU
 fi
 
 echo
 echo " Running netcdf2text in $CFDIR"
 echo " and writing to $CXDIR"
-echo
 cd $CFDIR
+echo "-----------------------------"
+echo " Converting VE"
+echo "-----------------------------"
 netcdf2text DZ VE
 mv *.txt $CXDIR_VE
+echo "-----------------------------"
+echo " Converting VG"
+echo "-----------------------------"
 netcdf2text DZ VG
 mv *.txt $CXDIR_VG
-netcdf2text DZ VU
-mv *.txt $CXDIR_VU
 echo " Done"
 echo
 
