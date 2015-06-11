@@ -9,12 +9,12 @@
 
 # input cfradial folder
 #-------------------------------
-# CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
+CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg05_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg14_cor"
 
-CFDIR="$HOME/P3_v2/cfrad/c04/leg10_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c04/leg10_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c04/leg11_cor"
 
 # output text folders
@@ -58,11 +58,11 @@ echo " Converting VE"
 echo "-----------------------------"
 netcdf2text DZ VE
 mv *.txt $CXDIR_VE
-echo "-----------------------------"
-echo " Converting VG"
-echo "-----------------------------"
-netcdf2text DZ VG
-mv *.txt $CXDIR_VG
+# echo "-----------------------------"
+# echo " Converting VG"
+# echo "-----------------------------"
+# netcdf2text DZ VG
+# mv *.txt $CXDIR_VG
 echo " Done"
 echo
 
