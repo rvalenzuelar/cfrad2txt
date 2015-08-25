@@ -157,6 +157,7 @@
 	CALL system(command)
 	OPEN(20, file='filenames.txt', status='old')
 	PRINT *, 'Total Files= ',nfile
+	
 	DO ii=1,nfile
 			READ(20,*) filename 
 			! PRINT *, 'Total Files= ',nfile,'file= ',ii,'  ',filename
@@ -624,10 +625,11 @@
 					WRITE(30,102)counter,(FIELDNAN(J,I),J=1,nranges)
 					WRITE(30,102)counter,(FIELD2(J,I),J=1,nranges)
 					WRITE(30,102)counter,(FIELDNAN(J,I),J=1,nranges)
+
 			ENDDO
 
 			101   format(I10,2x,A50,3I10,A5,5A3,D20.8,2F10.4,3D20.8,29F10.3)
-			102   format(I10,800F10.4) 
+			102   format(I10,1100F10.4) 
 
 
 			! Increase the ray counter by NBEAMS; this is done after each sweep
