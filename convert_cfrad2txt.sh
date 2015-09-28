@@ -10,9 +10,11 @@
 # input cfradial folder
 #-------------------------------
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg01_cor"
-CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg03_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg05_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c03/leg14_cor"
+# CFDIR="$HOME/P3_v2/cfrad/c03/leg16_cor"
+CFDIR="$HOME/P3_v2/cfrad/c03/leg20_cor"
 
 # CFDIR="$HOME/P3_v2/cfrad/c04/leg10_cor"
 # CFDIR="$HOME/P3_v2/cfrad/c04/leg11_cor"
